@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToyStore - Loja de Brinquedos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="store-header">
+        <div class="logo">🧸 Toy<span>Store</span></div>
+        <div class="cart-icon-container" onclick="toggleCart()">
+            <span class="cart-icon">🛒</span>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <main class="store-container">
+        
+        <section class="products-section">
+            <h2>Nossos Brinquedos</h2>
+            <div class="products-grid" id="products-grid">
+                </div>
+        </section>
+
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3>Meu Carrinho</h3>
+                <button class="close-cart" onclick="toggleCart()">✕</button>
+            </div>
+
+            <div class="cart-items" id="cart-items">
+                <p class="empty-message">Seu carrinho está vazio.</p>
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cart-total-value">R$ 0,00</span>
+                </div>
+                <button id="checkout-btn" class="checkout-btn" onclick="finalizePurchase()" disabled>
+                    Finalizar Compra
+                </button>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

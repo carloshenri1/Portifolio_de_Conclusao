@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.todo-container {
+    background-color: #1c1c1f;
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #29292e;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: #8257e5;
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+header p {
+    color: #a8a8b3;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+}
+
+/* Formulário */
+#todo-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+#todo-input, #todo-category, #todo-form button {
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #29292e;
+    font-size: 1rem;
+}
+
+#todo-input {
+    background-color: #121214;
+    color: #fff;
+}
+
+#todo-input:focus {
+    border-color: #8257e5;
+    outline: none;
+}
+
+#todo-category {
+    background-color: #121214;
+    color: #a8a8b3;
+    cursor: pointer;
+}
+
+#todo-form button {
+    background-color: #8257e5;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#todo-form button:hover {
+    background-color: #9466ff;
+}
+
+/* Lista de Tarefas */
+#todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    background-color: #121214;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #8257e5; /* Cor padrão */
+    transition: opacity 0.3s;
+}
+
+/* Cores por Categoria */
+.todo-item.faculdade { border-left-color: #00b37e; } /* Verde */
+.todo-item.pessoal { border-left-color: #ffb800; }   /* Amarelo */
+.todo-item.trabalho { border-left-color: #8257e5; }  /* Roxo */
+
+.todo-text {
+    flex-content: 1;
+    cursor: pointer;
+}
+
+/* Estilo para tarefa concluída */
+.todo-item.completed .todo-text {
+    text-decoration: line-through;
+    color: #737380;
+    opacity: 0.6;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #f75a68;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.delete-btn:hover {
+    color: #ff6b7a;
+}
